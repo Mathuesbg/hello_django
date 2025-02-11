@@ -3,4 +3,8 @@ from django.http import HttpResponse
 
 
 def my_view(request):
-    return HttpResponse('Hello world')
+    return HttpResponse('blog do app')
+
+
+def exemplo(request):
+    return HttpResponse('exemplo do app')
