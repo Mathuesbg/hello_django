@@ -6,7 +6,7 @@ from blog.views import my_view, exemplo
 
 urlpatterns = [
     path('',  my_view),
-    path('exemplo',  exemplo),
+    path('exemplo/',  exemplo),
 ]
 
 
