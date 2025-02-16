@@ -3,8 +3,15 @@ from django.http import HttpResponse
 
 
 def my_view(request):
-    return render(request, "blog/index.html")
+    context= {
+        "nome": "blog"
+    }
+    return render(request=request, template_name="blog/index.html", context=context)
 
 
 def exemplo(request):
-    return render(request, "blog/exemplo.html")
+    context= {
+        "nome": "exemplo",
+        "title": "exemplo"
+    }
+    return render(request=request, template_name="blog/exemplo.html",context=context)

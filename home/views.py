@@ -3,4 +3,13 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    return render(request, 'home/index.html')
+
+    context = {
+        "nome": "home"
+    }
+
+    return render(
+        request= request,
+        template_name= 'home/index.html',
+        context= context
+        )
