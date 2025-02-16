@@ -4,7 +4,8 @@ from django.http import HttpResponse
 
 def my_view(request):
     context= {
-        "nome": "blog"
+        "nome": "blog",
+        "title" : "blog"
     }
     return render(request=request, template_name="blog/index.html", context=context)
 
