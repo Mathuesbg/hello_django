@@ -1,12 +1,10 @@
-from django.contrib import admin
 from django.urls import path
-from django.http import HttpResponse
-from blog.views import my_view, exemplo
+from blog.views import blog, exemplo
 
 app_name = 'blog'
 
 urlpatterns = [
-    path('',  my_view, name='blog'),
+    path('',  blog, name='blog'),
     path('exemplo/',  exemplo, name='exemplo'),
 ]
 
