@@ -1,11 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .data import posts
 
-
-def my_view(request):
+def blog(request):
     context= {
         "nome": "blog",
-        "title" : "blog"
+        "title" : "blog",
+        "posts" : posts
     }
     return render(request=request, template_name="blog/index.html", context=context)
 
