@@ -3,7 +3,7 @@ from .data import posts
 
 def blog(request):
     context= {
-        "nome": "blog",
+        # "nome": "blog",
         "title" : "blog",
         "posts" : posts
     }
