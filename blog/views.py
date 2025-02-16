@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .data import posts
+from django.http import HttpResponse
 
 def blog(request):
     context= {
@@ -8,6 +9,9 @@ def blog(request):
         "posts" : posts
     }
     return render(request=request, template_name="blog/index.html", context=context)
+
+def post(request,id):
+    return HttpResponse("oi")
 
 
 def exemplo(request):
