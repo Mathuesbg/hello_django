@@ -11,7 +11,19 @@ def blog(request):
     return render(request=request, template_name="blog/index.html", context=context)
 
 def post(request,id):
-    return HttpResponse("oi")
+    found_post = None
+
+    for post in posts:
+        if post["id"] == id:
+            found_post = post
+            break
+
+    context= {
+        "title" : "post",
+        "post" : found_post
+    }        
+
+    return render(request, template_name='blog/post.html', context=context)
 
 
 def exemplo(request):

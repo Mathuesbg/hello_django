@@ -1,0 +1,16 @@
+{% extends "global/base.html" %}
+
+{% if nome %}
+    {% block texto %} {{nome}} {% endblock texto %}
+{% endif %} 
+
+{% block posts %}
+    <article class="post single-post">
+        <header>
+            <h1 class="post__title">
+                {{post.title}}
+            </h1>
+        </header>
+        <div class="post__body">{{post.body}}</div>
+    </article>
+{% endblock posts %}
