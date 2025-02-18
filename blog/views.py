@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .data import posts
-from django.http import HttpResponse
+from django.http import Http404
 
 def blog(request):
     context= {
@@ -17,7 +17,10 @@ def post(request,id):
         if post["id"] == id:
             found_post = post
             break
-
+ 
+    if found_post is None:
+        raise Http404('post nao existe')           
+    
     context= {
         "title" : "post",
         "post" : found_post
