@@ -35,3 +35,35 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(32rem,1fr));
   }
 }
+
+.menu {
+  background: rgb(32, 31, 31);
+  padding: 1.5rem;
+
+}
+
+.menu-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color: darkblue
+}
+.menu-links a  {
+  color: whitesmoke;
+  font-size: 20px;
+}
+.menu-links li {
+  border-radius: 5PX;
+  padding: 10px 15px;
+  list-style: none;
+
+}
+.menu-links li:hover {
+  background-color: rgb(41, 39, 39);
+  border: 2px solid black;
+
+}
